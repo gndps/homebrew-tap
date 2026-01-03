@@ -1,10 +1,10 @@
 class DotfilesSync < Formula
   desc "A clean, hassle-free dotfiles manager with git integration"
   homepage "https://github.com/gndps/dotfiles_sync"
-  version "1.0.17"
+  version "1.0.18"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.17/dotfiles_sync-aarch64-apple-darwin.tar.xz"
-    sha256 "0b99462241520f9ddceb42dad8de46587e99e70b3636874691c2e1201b803d8f"
+    url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.18/dotfiles_sync-aarch64-apple-darwin.tar.xz"
+    sha256 "ddb720c637ac19da8ffb3cf1ecec4dc8fd532127b7b59b2280e3a40b03d52bc9"
   end
   license "MIT"
 

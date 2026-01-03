@@ -1,25 +1,25 @@
 class DotfilesSync < Formula
   desc "A clean, hassle-free dotfiles manager with git integration"
   homepage "https://github.com/gndps/dotfiles_sync"
-  version "1.0.6"
+  version "1.0.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.6/dotfiles_sync-aarch64-apple-darwin.tar.xz"
-      sha256 "80eedda8e7af0d064803eb17b7cc41a3d16d1df61bd844c069c7838f1adef608"
+      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.8/dotfiles_sync-aarch64-apple-darwin.tar.xz"
+      sha256 "4e41dfca9f822ad22cc78a658112bb98eacfc933971544bdbfe71184153b5adf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.6/dotfiles_sync-x86_64-apple-darwin.tar.xz"
-      sha256 "130ce20acc34df4d3bd6d82f0a97c62b119042fe65f82591fba8ae7826969df9"
+      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.8/dotfiles_sync-x86_64-apple-darwin.tar.xz"
+      sha256 "b970018b61d52e0da31f7af42bcecbef6f350baee0604f48c1b9b8aff6b3803b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.6/dotfiles_sync-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "84310fddcaf7b1ad991f32dcef94af5b4e0c88fb32e00aaae5ed1acf49239d73"
+      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.8/dotfiles_sync-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "53320ac409a3383a6b568f3bff1690c141eda276489b153dbfaf04903dbdece6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.6/dotfiles_sync-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3cb1f32b44e44db35bd35c28ac9a1b0b035404b3e2e6540b343862eeacd09d23"
+      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.8/dotfiles_sync-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7d3793d40f7476266a902f7db729050ab2425ba5d0ea0ca04a66565105eb73cf"
     end
   end
   license "MIT"
@@ -48,10 +48,10 @@ class DotfilesSync < Formula
   end
 
   def install
-    bin.install "dotfiles_sync" if OS.mac? && Hardware::CPU.arm?
-    bin.install "dotfiles_sync" if OS.mac? && Hardware::CPU.intel?
-    bin.install "dotfiles_sync" if OS.linux? && Hardware::CPU.arm?
-    bin.install "dotfiles_sync" if OS.linux? && Hardware::CPU.intel?
+    bin.install "dotfiles" if OS.mac? && Hardware::CPU.arm?
+    bin.install "dotfiles" if OS.mac? && Hardware::CPU.intel?
+    bin.install "dotfiles" if OS.linux? && Hardware::CPU.arm?
+    bin.install "dotfiles" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 

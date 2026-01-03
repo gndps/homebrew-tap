@@ -1,25 +1,25 @@
 class DotfilesSync < Formula
   desc "A clean, hassle-free dotfiles manager with git integration"
   homepage "https://github.com/gndps/dotfiles_sync"
-  version "1.0.4"
+  version "1.0.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.4/dotfiles_sync-aarch64-apple-darwin.tar.xz"
-      sha256 "9f71979ca49ddb9403da3c7a7f6f504b2674250c2b23dc10c90e2aecc9a8a64f"
+      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.6/dotfiles_sync-aarch64-apple-darwin.tar.xz"
+      sha256 "80eedda8e7af0d064803eb17b7cc41a3d16d1df61bd844c069c7838f1adef608"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.4/dotfiles_sync-x86_64-apple-darwin.tar.xz"
-      sha256 "c20cc7a381f83b8cde415fb1eb61e8063f17c362c58387177890c770f42c65ba"
+      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.6/dotfiles_sync-x86_64-apple-darwin.tar.xz"
+      sha256 "130ce20acc34df4d3bd6d82f0a97c62b119042fe65f82591fba8ae7826969df9"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.4/dotfiles_sync-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7fe0b038e81ffcf70ec7068d5629be2ef3a641a7d533730ec038d62ace848af2"
+      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.6/dotfiles_sync-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "84310fddcaf7b1ad991f32dcef94af5b4e0c88fb32e00aaae5ed1acf49239d73"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.4/dotfiles_sync-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "51730cffd0fd0af0493a96b625cea5f5b1332abe6b4dade2ff03b4e27ae17ae9"
+      url "https://github.com/gndps/dotfiles_sync/releases/download/v1.0.6/dotfiles_sync-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3cb1f32b44e44db35bd35c28ac9a1b0b035404b3e2e6540b343862eeacd09d23"
     end
   end
   license "MIT"

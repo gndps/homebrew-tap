@@ -1,25 +1,25 @@
 class PyenvTakeout < Formula
   desc "Manage Python virtual environments with deterministic path-based names"
   homepage "https://github.com/gndps/pyenv-takeout"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.1/pyenv-takeout-aarch64-apple-darwin.tar.xz"
-      sha256 "060704812ed57c8784c92577c91719abeb8cad16778ec1fb628d3f6965f81f57"
+      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.2/pyenv-takeout-aarch64-apple-darwin.tar.xz"
+      sha256 "acd6b70a74b0670df4facaa4e64f855d56eeba0b6790c0d0f0e5dbdfeccf4abf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.1/pyenv-takeout-x86_64-apple-darwin.tar.xz"
-      sha256 "f329626125375b6fabc842df8cdcee815d1eb725adeced4d38131dc3c3684226"
+      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.2/pyenv-takeout-x86_64-apple-darwin.tar.xz"
+      sha256 "a3a7140075b02efbc56a80086769290ff8500e970e8b7efed03b2593f7c66f90"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.1/pyenv-takeout-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "918c0dc6a69b972f0d040feae4914fa24aa14723305f61ad96e4886faad26e79"
+      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.2/pyenv-takeout-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0e104bbb6502efdbdc9277ed36b2cd52752948928b37221b0fca92b48cd869ce"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.1/pyenv-takeout-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5c8571ce43fff06404cc7cd0790e6e0ad30bac0fae8e38d83f2942142d3668c1"
+      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.2/pyenv-takeout-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a1bd50c446a47381629dfd278d94b23be7d63e80850c2b253b85974980665c36"
     end
   end
   license "MIT"
@@ -54,9 +54,12 @@ class PyenvTakeout < Formula
 
     install_binary_aliases!
 
+    # Homebrew will automatically install these, so we don't need to do that
     doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
     leftover_contents = Dir["*"] - doc_files
 
+    # Install any leftover files in pkgshare; these are probably config or
+    # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
 end

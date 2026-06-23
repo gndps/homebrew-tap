@@ -1,25 +1,25 @@
 class Projenv < Formula
   desc "Project directory bookmark manager with profiles"
   homepage "https://github.com/gndps/projenv"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/projenv/releases/download/v0.1.1/projenv-aarch64-apple-darwin.tar.xz"
-      sha256 "47eb3be9f407ad39c7a71cfcf1c0453f1537afaa9c8753d14a593a0b7facdb74"
+      url "https://github.com/gndps/projenv/releases/download/v0.1.2/projenv-aarch64-apple-darwin.tar.xz"
+      sha256 "b10ac0c9b6659d5c3559fbb7fc8769ed83595497ad8423122b99d5e0e4b883ad"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/projenv/releases/download/v0.1.1/projenv-x86_64-apple-darwin.tar.xz"
-      sha256 "c0dfe211aa5ed6488b92de220f761440a297a0bf5f0c3d4ec0214308d4a7b3c4"
+      url "https://github.com/gndps/projenv/releases/download/v0.1.2/projenv-x86_64-apple-darwin.tar.xz"
+      sha256 "14ba7478acd89fb2d34da67835a10ead095054855198f250497aa26484334811"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/projenv/releases/download/v0.1.1/projenv-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "213dfd38efbd01d2856486daf83f542ad18d95905ee9e52fb8537742f2619ff8"
+      url "https://github.com/gndps/projenv/releases/download/v0.1.2/projenv-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "16864c12190d9b29438c69774a5a417ca306dc074ed40ad79bf5ec8590d1faf1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/projenv/releases/download/v0.1.1/projenv-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "393c625ef4ac411a2fcb3b8b5d28c451f507889b3ddc7d6dba1b30fb78657696"
+      url "https://github.com/gndps/projenv/releases/download/v0.1.2/projenv-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "19c98f202b43d54d67ca5876590ad0fb51c8bca0793ec102bfd9917722e7c757"
     end
   end
   license "MIT"
@@ -54,9 +54,12 @@ class Projenv < Formula
 
     install_binary_aliases!
 
+    # Homebrew will automatically install these, so we don't need to do that
     doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
     leftover_contents = Dir["*"] - doc_files
 
+    # Install any leftover files in pkgshare; these are probably config or
+    # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
 end

@@ -1,25 +1,25 @@
 class Bfcli < Formula
   desc "A simple shell file sourcing manager"
   homepage "https://github.com/gndps/bfcli"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/bfcli/releases/download/v0.1.2/bfcli-aarch64-apple-darwin.tar.xz"
-      sha256 "e69c7a3460e78a09dcb42b0f5fca9c92fdbdb29e322755b9426f3c87e42ddc18"
+      url "https://github.com/gndps/bfcli/releases/download/v0.1.3/bfcli-aarch64-apple-darwin.tar.xz"
+      sha256 "f6647c16a577b7cc62615ab96867a623392e238c5d7e6a98d5c2af214e7982f0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/bfcli/releases/download/v0.1.2/bfcli-x86_64-apple-darwin.tar.xz"
-      sha256 "a0a6e41c21d5fe47977c50348cf32902f9cfcbd1678fe92999f13a4a2bafd9e4"
+      url "https://github.com/gndps/bfcli/releases/download/v0.1.3/bfcli-x86_64-apple-darwin.tar.xz"
+      sha256 "6249e85a0848dfe8576898a49a2b52a3d8b9f34f05f43a10a481d4f8dce12c14"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/bfcli/releases/download/v0.1.2/bfcli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1e5b4f1d9b0030e6bf3e290ba52fea65b8231db7a82ec0d0da9e558d30b6d1fb"
+      url "https://github.com/gndps/bfcli/releases/download/v0.1.3/bfcli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b80ce8330b921196ba0f3382a4aac25082f00ee54f453f89a58c0925f77fa562"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/bfcli/releases/download/v0.1.2/bfcli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "694bf765baf89d5b53c453e93f8fcdbfd5fb764e971b09f0aa21f3baeb845b17"
+      url "https://github.com/gndps/bfcli/releases/download/v0.1.3/bfcli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "691b025b981a3e3d0d63643df55d5b27265cd20e40d76471bfa84836f25ae94f"
     end
   end
   license "MIT"

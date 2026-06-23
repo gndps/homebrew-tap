@@ -1,25 +1,25 @@
 class PyenvTakeout < Formula
   desc "Manage Python virtual environments with deterministic path-based names"
   homepage "https://github.com/gndps/pyenv-takeout"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.0/pyenv-takeout-aarch64-apple-darwin.tar.xz"
-      sha256 "6203bb205dd38056e34dde527517e961d30a961bea23a42869bc87a45d94e372"
+      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.1/pyenv-takeout-aarch64-apple-darwin.tar.xz"
+      sha256 "060704812ed57c8784c92577c91719abeb8cad16778ec1fb628d3f6965f81f57"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.0/pyenv-takeout-x86_64-apple-darwin.tar.xz"
-      sha256 "bed8bf24abd2b6129066e0d48a85937c481091793d8617fa66cef9d21d325ec0"
+      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.1/pyenv-takeout-x86_64-apple-darwin.tar.xz"
+      sha256 "f329626125375b6fabc842df8cdcee815d1eb725adeced4d38131dc3c3684226"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.0/pyenv-takeout-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1a7306922d377fd9dbbf0a194b2e3787053772233d49b4b9dd06f185d6d70b75"
+      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.1/pyenv-takeout-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "918c0dc6a69b972f0d040feae4914fa24aa14723305f61ad96e4886faad26e79"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.0/pyenv-takeout-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e6ede0dd02aa3a521186561990db62c32f0f95fdb2369e1ac807d04c981fbf62"
+      url "https://github.com/gndps/pyenv-takeout/releases/download/v0.1.1/pyenv-takeout-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5c8571ce43fff06404cc7cd0790e6e0ad30bac0fae8e38d83f2942142d3668c1"
     end
   end
   license "MIT"
@@ -34,7 +34,8 @@ class PyenvTakeout < Formula
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
     os = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
-    "#{cpu}-#{os}"
+
+    "\#{cpu}-\#{os}"
   end
 
   def install_binary_aliases!
@@ -50,9 +51,12 @@ class PyenvTakeout < Formula
     bin.install "pyenv-takeout" if OS.mac? && Hardware::CPU.intel?
     bin.install "pyenv-takeout" if OS.linux? && Hardware::CPU.arm?
     bin.install "pyenv-takeout" if OS.linux? && Hardware::CPU.intel?
+
     install_binary_aliases!
+
     doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
     leftover_contents = Dir["*"] - doc_files
+
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
 end

@@ -35,7 +35,7 @@ class PyenvTakeout < Formula
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
     os = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
 
-    "\#{cpu}-\#{os}"
+    "#{cpu}-#{os}"
   end
 
   def install_binary_aliases!

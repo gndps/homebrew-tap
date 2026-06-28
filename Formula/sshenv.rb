@@ -1,25 +1,25 @@
 class Sshenv < Formula
   desc "SSH key profile manager — switch between SSH key pairs"
   homepage "https://github.com/gndps/sshenv"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/sshenv/releases/download/v0.1.2/sshenv-aarch64-apple-darwin.tar.xz"
-      sha256 "1e24828aef8ad2224b9242f6c173cedfaddd7fdce4190e0482b1ae76302962c0"
+      url "https://github.com/gndps/sshenv/releases/download/v0.1.3/sshenv-aarch64-apple-darwin.tar.xz"
+      sha256 "7dabcbae0b4ad8df54afc4d2db6acecbdb53660b2994dbad92a521fd9fea095a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/sshenv/releases/download/v0.1.2/sshenv-x86_64-apple-darwin.tar.xz"
-      sha256 "b8592f625596001e6654a96ebaa019e7482f9664ccad6b55ff3db4257c164a6f"
+      url "https://github.com/gndps/sshenv/releases/download/v0.1.3/sshenv-x86_64-apple-darwin.tar.xz"
+      sha256 "1a51c50f4ebc950d46a7a97792ba49117fe1ac19c3d427fda94d281eed5807d3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/sshenv/releases/download/v0.1.2/sshenv-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "350e2a1a36c75e867493594cf9af4717eca65e8261eb9a2218bc9fb1f72bcf08"
+      url "https://github.com/gndps/sshenv/releases/download/v0.1.3/sshenv-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "26b7b248a171cbd5aa9521cfbd9c313bee313fd2e7558cc5b789df4ae7132a93"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/sshenv/releases/download/v0.1.2/sshenv-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "733f06ad63445a0de8f837e2aa855287908826908da5e770e1240e57d2da40b4"
+      url "https://github.com/gndps/sshenv/releases/download/v0.1.3/sshenv-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "253acf622f8d4e6a63adfe01abba8dceef8943ae29e93d307078193516e0d2cd"
     end
   end
   license "MIT"

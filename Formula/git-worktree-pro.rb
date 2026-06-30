@@ -1,25 +1,25 @@
 class GitWorktreePro < Formula
   desc "A comprehensive git worktree management toolkit"
   homepage "https://github.com/gndps/git-worktree-pro"
-  version "0.2.4"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.2.4/git-worktree-pro-aarch64-apple-darwin.tar.xz"
-      sha256 "3bd727f4bd6a31e3dd3963a739d0687167a9937e1a92700cb267b1fde7abd365"
+      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.0/git-worktree-pro-aarch64-apple-darwin.tar.xz"
+      sha256 "d218b8a67e2ff7a08f80ffd316a635c964c06715e70ffd4dd86d7938e287eea2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.2.4/git-worktree-pro-x86_64-apple-darwin.tar.xz"
-      sha256 "c7da962c03c6e556079a49c6b1e2e6c7f405fd46168c161211f41e6795f5a962"
+      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.0/git-worktree-pro-x86_64-apple-darwin.tar.xz"
+      sha256 "62fa9fa7b4c81f72345b53a0b55005d76236e1c57e883f13601bb670ad73bb32"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.2.4/git-worktree-pro-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8a3f048a3fa012a2c84ac83e2d73aa22a63a208a3285a1d10a3916ed2e78be49"
+      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.0/git-worktree-pro-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8e11cab3602bf54576003bb352a44d4f5f802b39b3d2a9436a237c8250bc1bfa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.2.4/git-worktree-pro-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "58d754f7548a6f2e6b4931d5f6177139beb87f984dd00200bcbcb7b183cd299e"
+      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.0/git-worktree-pro-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "92771af4a33facacd777a54a06ecef33d1837323e1ca5e70a399c11fbb699fea"
     end
   end
   license "MIT"

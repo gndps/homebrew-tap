@@ -1,25 +1,25 @@
 class Appendrc < Formula
   desc "Manage and time shell sourcable files"
   homepage "https://github.com/gndps/appendrc"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/appendrc/releases/download/v0.1.2/appendrc-aarch64-apple-darwin.tar.xz"
-      sha256 "01e2b15d591ccaea56b0a4f986beecd5d89e7136960af311056b116bcb05747d"
+      url "https://github.com/gndps/appendrc/releases/download/v0.1.3/appendrc-aarch64-apple-darwin.tar.xz"
+      sha256 "afc5ba3e04299a549118d29a98e464d22075821a69ffcc2ef12dfabc4875a7b8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/appendrc/releases/download/v0.1.2/appendrc-x86_64-apple-darwin.tar.xz"
-      sha256 "57d49b1cf851b3a350a6a518629b495a403d0db6625a419942e6be386d4e09f3"
+      url "https://github.com/gndps/appendrc/releases/download/v0.1.3/appendrc-x86_64-apple-darwin.tar.xz"
+      sha256 "5e8709e3fde28b6636c5d014391e199367d0ddcccf273bd6d997e8aa03f5ebe4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/appendrc/releases/download/v0.1.2/appendrc-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "21bd4404f953e6ac6b0f5c5e14142c384cde5eb0b64ba7e7c244a443866f0a9f"
+      url "https://github.com/gndps/appendrc/releases/download/v0.1.3/appendrc-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9366c8cac62daf0ce06c9a5b75279c84ca6f1d7d70e13ff1d72184f26f3c5685"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/appendrc/releases/download/v0.1.2/appendrc-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4daea8d9693247a2b11736151568fa9a21deefe738e00bc18e81ee82363710a0"
+      url "https://github.com/gndps/appendrc/releases/download/v0.1.3/appendrc-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d7e53ba52faf64ff48abd447752164835f63ef9f372189770e83ebf3344aa835"
     end
   end
   license "MIT"

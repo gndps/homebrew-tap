@@ -1,5 +1,5 @@
 # Template rendered by .github/workflows/release.yml into gndps/homebrew-tap.
-# https://github.com/gndps/peonping-ui/archive/refs/tags/v0.1.0.tar.gz and e7b1175a27565768e4cf8a2a5f3b4c004546625d3cd4d279d02cd474bce09486 are substituted at release time.
+# The url and sha256 placeholders are substituted at release time.
 class PeonpingUi < Formula
   desc "Local web UI to browse, mix, edit and install OpenPeon (peon-ping) sound packs"
   homepage "https://github.com/gndps/peonping-ui"

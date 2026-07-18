@@ -1,0 +1,19 @@
+Formula/peonping-ui.rb
+  s_fee422423eb3da::t_ce03e3e66afd96 1-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "bda5d59d61c7acd7713d407a80b1f0a345913824",
+  "prompts": {},
+  "sessions": {
+    "s_fee422423eb3da": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1c31d185-f71e-41dd-8f5d-644d74505f86",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "gndps <gndps@users.noreply.github.com>"
+    }
+  }
+}

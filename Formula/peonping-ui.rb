@@ -1,10 +1,10 @@
-# Template rendered by .github/workflows/release.yml into gndps/homebrew-tap.
+# Template rendered by packaging/release.sh into gndps/homebrew-tap.
 # The url and sha256 placeholders are substituted at release time.
 class PeonpingUi < Formula
   desc "Local web UI to browse, mix, edit and install OpenPeon (peon-ping) sound packs"
   homepage "https://github.com/gndps/peonping-ui"
-  url "https://github.com/gndps/peonping-ui/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "e7b1175a27565768e4cf8a2a5f3b4c004546625d3cd4d279d02cd474bce09486"
+  url "https://github.com/gndps/peonping-ui/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "f0552aba950f27edc3c084093707e80ada1f1a5a5cf062d99e1b56565919cb03"
   license "MIT"
 
   depends_on "node"

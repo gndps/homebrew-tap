@@ -1,25 +1,25 @@
 class GitWorktreePro < Formula
   desc "A comprehensive git worktree management toolkit"
   homepage "https://github.com/gndps/git-worktree-pro"
-  version "0.3.2"
+  version "0.3.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.2/git-worktree-pro-aarch64-apple-darwin.tar.xz"
-      sha256 "a94d16d8bd61f0d1290e1d51e791968964afc9be4c4cbd264c052da0c181a91c"
+      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.3/git-worktree-pro-aarch64-apple-darwin.tar.xz"
+      sha256 "37e535be8db05a728bb88e8f8b95be5a9c957f3cd8a7deb49efa78c1610e90da"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.2/git-worktree-pro-x86_64-apple-darwin.tar.xz"
-      sha256 "5f86e461253b8fbe27ebc582061d7747ce98e78c517b056d2d476efc661fcf16"
+      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.3/git-worktree-pro-x86_64-apple-darwin.tar.xz"
+      sha256 "9569ca1d8423024ff8ed5b2d868b7d2d346c94b8fbc5bd6ed149a9601dbb4b6f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.2/git-worktree-pro-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a6b1401ab941f688a01670c06ae3ce0442ddbbbcb9ec7dd912bf1566bafa9338"
+      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.3/git-worktree-pro-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e1f2b5e395bf19a9417b750fefe50ec09509d022e9f4a1ee6aa1f99c79e2a081"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.2/git-worktree-pro-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b7281dc02ea1b0352608080a0cefc62c74cd17169053e50e480022f943962be5"
+      url "https://github.com/gndps/git-worktree-pro/releases/download/v0.3.3/git-worktree-pro-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9bd5b72e893a916614db4747d8148b6c1d5b6e0c634012f72cf569fc4ac06ed9"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class GitWorktreePro < Formula
   end
 
   def install
-    bin.install "gwtp" if OS.mac? && Hardware::CPU.arm?
-    bin.install "gwtp" if OS.mac? && Hardware::CPU.intel?
-    bin.install "gwtp" if OS.linux? && Hardware::CPU.arm?
-    bin.install "gwtp" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "gwtp"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "gwtp"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "gwtp"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "gwtp"
+    end
 
     install_binary_aliases!
 
